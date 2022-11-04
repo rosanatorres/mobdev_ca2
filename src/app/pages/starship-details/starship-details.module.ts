@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PlanetsPageRoutingModule } from './planets-routing.module';
+import { StarshipDetailsPageRoutingModule } from './starship-details-routing.module';
 
-import { PlanetsPage } from './planets.page';
+import { SpaceshipDetailsPage } from './starship-details.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PlanetsPageRoutingModule
+    StarshipDetailsPageRoutingModule
   ],
-  declarations: [PlanetsPage]
+  declarations: [StarshipDetailsPage]
 })
-export class PlanetsPageModule {}
+export class StarshipDetailsPageModule {}

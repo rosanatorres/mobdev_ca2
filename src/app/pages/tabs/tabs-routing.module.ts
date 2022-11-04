@@ -22,20 +22,28 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'people',
+        path: 'spaceships',
         children: [
           {
             path: '',
-            loadChildren: () => import('../people/people.module').then( m => m.PeoplePageModule)
+            loadChildren: () => import('../spaceships/spaceships.module').then( m => m.SpaceshipsPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../spaceship-details/spaceship-details.module').then( m => m.SpaceshipDetailsPageModule)
           }
         ]
       },
       {
-        path: 'planets',
+        path: 'species',
         children: [
           {
             path: '',
-            loadChildren: () => import('../planets/planets.module').then( m => m.PlanetsPageModule)
+            loadChildren: () => import('../species/species.module').then( m => m.SpeciesPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../specimen-details/specimen-details.module').then( m => m.SpecimenDetailsPageModule)
           }
         ]
       }

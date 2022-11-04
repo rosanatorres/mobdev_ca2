@@ -1,0 +1,57 @@
+	
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(specimen)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ specimen?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteSpecimen()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteSpecimen()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+  <ion-card *ngIf="specimen">
+    
+    <ion-card-content>
+      {{ species.name }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.classification }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.designation }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.average_height }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.skin_colors }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.hair_colors }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.eye_colors }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.average_lifespan }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.homeworld }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.language }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.people }}
+    </ion-card-content>
+
+  </ion-card>
+ 
+</ion-content>
