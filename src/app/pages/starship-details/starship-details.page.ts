@@ -3,20 +3,20 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-spaceship-details',
-  templateUrl: './spaceship-details.page.html',
-  styleUrls: ['./spaceship-details.page.scss'],
+  selector: 'app-starship-details',
+  templateUrl: './starship-details.page.html',
+  styleUrls: ['./starship-details.page.scss'],
 })
-export class SpaceshipDetailsPage implements OnInit {
+export class StarshipDetailsPage implements OnInit {
 	
-  spaceship: any;
+  starship: any;
  
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
  
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.http.get(`https://swapi.dev/api/films/${id}`).subscribe(res => {
-      this.spaceship = res;
+    this.http.get(`https://swapi.dev/api/starships/${id}`).subscribe(res => {
+      this.starship = res;
     });
   }
 

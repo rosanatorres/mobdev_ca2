@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { StarshipDetailsPageRoutingModule } from './starship-details-routing.module';
 
-import { SpaceshipDetailsPage } from './starship-details.page';
+import { StarshipDetailsPage } from './starship-details.page';
 
 @NgModule({
   imports: [

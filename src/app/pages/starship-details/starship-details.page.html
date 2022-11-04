@@ -1,67 +1,33 @@
-	
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" defaultHref="/tabs/(starship)">
+    <ion-buttons slot="start" defaultHref="/tabs/(starships:starships)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ starship?.title }}</ion-title>
+    <ion-title>{{ starship?.name }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+      <ion-button (click)="unfavoriteStarship()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+      <ion-button (click)="favoriteStarship()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
  
-<ion-card *ngIf="starship">
-    
-  <ion-card-content>
-    {{ starships.name }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.model }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.manufacturer }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.cost_in_credits }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.length }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.max_atmosphering_speed }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.crew }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.passengers }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.cargo_capacity }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.consumables }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.hyperdrive_rating }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.MGLT }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.starship_class }}
-  </ion-card-content>
-  <ion-card-content>
-    {{ starships.pilots }}
-  </ion-card-content>
-
-
-</ion-card>
-
+<ion-content padding="">
+ 
+  <ion-card *ngIf="starship" class="movie-card">
+    <ion-card-header>Name {{ starship.name }}</ion-card-header>
+    <ion-card-content>
+      Model: {{ starship.model }}
+    </ion-card-content>
+ 
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="starship" slot="start"></ion-icon>
+      Manufacturer: {{ starship.manufacturer }}
+    </ion-item>
+ 
+  </ion-card>
+ 
 </ion-content>
